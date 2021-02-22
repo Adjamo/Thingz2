@@ -1,14 +1,4 @@
 
-# make it so 7s destroy other pieces
-# and 7s only spread over abcd
-# and '$' makes 7s
-
-#hows it g                                                            oin
-# buy android worms
-# buy lots of food 
-# violin music for supermarkets - jon rose
-# https://www.youtube.com/watch?v=i7j6ZKVJJAU
-
 import os
 import time
 import random
@@ -81,15 +71,6 @@ grid[0][3] = '3'
 grid[0][4] = '4'
 grid[0][9] = '5'
 grid[1][7] = '6'
-
-'''
-buckets = ['6'] * num
-buckets[9] = '7'
-buckets[1] = '8'
-buckets[2] = '9'
-buckets[3] = '0'
-buckets[4] = '1'
-'''
 
 
 # prints the grid2
@@ -202,10 +183,7 @@ def expand():
 
       #print(j)
 
-      if( j == '1' ): # not working
-        #print(':D' + str(i))
-        #print('# detected')
-        #print('x and y of # is: ...' + str(county) + ' ' + str(count))
+      if( j == '1' ): # 
         grid2[count][county-1] = '10' # up
         grid2[count][ numberz_h(county+1) ] = '10' # down
         grid2[count-1][county] = '10' # left
@@ -217,10 +195,7 @@ def expand():
         grid2[ count-1 ][ numberz_h(county+1) ] = '10' # up right
         #grid[count][county] = '4'
         
-      if( j == '2' ): # not working
-        #print(':D' + str(i))
-        #print('# detected')
-        #print('x and y of # is: ...' + str(county) + ' ' + str(count))
+      if( j == '2' ): # 
         grid2[count][ numberz_h(county+1) ] = '11'
         grid2[count][county-1] = '11'
         grid2[count-1][county] = '11'
@@ -233,10 +208,7 @@ def expand():
         grid2[ count-1 ][ numberz_h(county+1) ] = '11' # up right
 
         
-      if( j == '3' ): # not working
-        #print(':D' + str(i))
-        #print('# detected')
-        #print('x and y of # is: ...' + str(county) + ' ' + str(count))
+      if( j == '3' ): # 
         grid2[count][county-1] = '12' # up
         grid2[count][ numberz_h(county+1) ] = '12' # down
         grid2[count-1][county] = '12' # left
@@ -248,10 +220,7 @@ def expand():
         grid2[ count-1 ][ numberz_h(county+1) ] = '12' # up right
         #grid[count][county] = '4'
 
-      if( j == '4' ): # not working
-        #print(':D' + str(i))
-        #print('# detected')
-        #print('x and y of # is: ...' + str(county) + ' ' + str(count))
+      if( j == '4' ): # 
         grid2[count][county-1] = '13' # up
         grid2[count][ numberz_h(county+1) ] = '13' # down
         grid2[count-1][county] = '13' # left
@@ -263,7 +232,7 @@ def expand():
         grid2[ count-1 ][ numberz_h(county+1) ] = '13' # up right
         #grid[count][county] = '4'
         
-      if( j == '5' ): # here
+      if( j == '5' ): # 
         if( grid2[count][county-1] != '6' ):
           grid2[count][county-1] = '5' # up
 
